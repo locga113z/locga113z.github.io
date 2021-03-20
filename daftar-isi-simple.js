@@ -173,7 +173,7 @@ function displayToc(filter) {
    var tocTool1 = 'Xếp theo tên';
    var tocHead2 = 'Thời gian';
    var tocTool2 = 'Xếp theo thời gian';
-   var tocHead3 = 'Chuyên môn';
+   var tocHead3 = 'Chuyên mục';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -192,7 +192,7 @@ function displayToc(filter) {
       tocTool2 += ' (oldest first)';
    }
    if (postFilter != '') {
-      tocTool3 = 'Click to show all posts';
+      tocTool3 = 'Hiển thị tất cả bài viết';
    }
    tocTable += '<table>';
    tocTable += '<tr>';
@@ -220,10 +220,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
+      var tocNote = '<span class="toc-note">Hiển thị tất cả ' + postTitle.length + ' bài viết<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
-      tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
+      var tocNote = '<span class="toc-note">Đang hiển thị ' + numDisplayed + ' bài viết cùng chuyên mục \'';
+      tocNote += postFilter + '\' of '+ postTitle.length + ' bài viết tất cả<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
@@ -249,7 +249,7 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Just wait... TOC is loading"); }
+  else { alert("Đang tải..."); }
 }
 
 function hideToc() {
